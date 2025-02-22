@@ -15,10 +15,10 @@ jobs:
       run: pip install pyinstaller
 
     - name: pyinstallerでデプロイする
-      run: pyinstaller --onefile --noconsole app.py
+      run: pyinstaller --onefile --noconsole main.py
 
     - name: デプロイしたファイルをアップロード
       uses: actions/upload-artifact@v4
       with:
-        name: app.exe
-        path: dist/app.exe
+        name: main.exe
+        path: dist/main.exe
